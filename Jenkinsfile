@@ -7,6 +7,12 @@ pipeline {
             }
         }
         
+        stage('Maven Build'){
+            steps{
+                sh 'mvn packkage'
+            }
+        }
+
         stage('Create DockerImage'){
             steps{
                 sh 'docker build -t thetips4you/springboot:latest .'
