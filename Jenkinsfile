@@ -15,7 +15,7 @@ pipeline {
 
         stage('Create DockerImage'){
             steps{
-                sh 'docker build -t thetips4you/springboot:latest .'
+                sh 'docker build -t midguard/springboot:latest .'
             }
         }
         
