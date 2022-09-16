@@ -14,9 +14,6 @@ pipeline {
         }
 
         stage('Create DockerImage'){
-            agent { 
-                label 'DockerAgent01'
-            }
             steps{
                 sh 'docker build -t midguard/springboot:latest .'
             }
